@@ -1,10 +1,12 @@
-import os
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
 
-BOT_TOKEN: str = os.getenv("8604814040:AAHq4lSnkwaOEoAeXh7rw-QBQIl51IZqrFI", "")
-MASTER_PASSWORD: str = os.getenv("MASTER_PASSWORD", "2026")
+# Qavs ichida faqat o'zgaruvchilarning NOMI bo'lishi kerak, haqiqiy parollar emas!
+BOT_TOKEN: str = os.getenv("BOT_TOKEN")
+MASTER_PASSWORD: str = os.getenv("MASTER_PASSWORD")
 
 if not BOT_TOKEN:
-    raise ValueError("BOT_TOKEN .env faylida belgilanmagan!")
+    raise ValueError("BOT_TOKEN topilmadi! Render yoki .env faylini tekshiring.")
+    
